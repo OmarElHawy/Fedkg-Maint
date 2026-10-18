@@ -26,19 +26,18 @@ reproducibility gate (regression `val30` reproduced with absolute difference
 
 ```mermaid
 flowchart LR
-    F1[Factory FD001] --> P1[local preprocessing + local KG]
-    F2[Factory FD002] --> P2[local preprocessing + local KG]
-    F3[Factory FD003] --> P3[local preprocessing + local KG]
-    P1 --> R{{round r: server aggregates clipped deltas}}
-    P2 --> R
-    P3 --> R
-    R --> D{{optional DP: clip C=0.32 + Gaussian noise σ}}
-    D --> G[global FedProx model · 30 rounds]
-    G --> Y[per-engine prediction · unseen FD004]
-    Y --> K[KG facts · current active symptoms + actions]
-    Y --> E[rule-based evaluation · RMSE / engine MAE]
-    K --> L[LLM explanation · versions A (no KG) / B (with KG)]
-    L --> C[hallucination checker · supported / unsupported claims]
+    F1["Factory FD001"] --> P1["local preprocessing + local KG"]
+    F2["Factory FD002"] --> P2["local preprocessing + local KG"]
+    F3["Factory FD003"] --> P3["local preprocessing + local KG"]
+    P1 --> D["each client trains locally; optional DP on its update: clip C=0.32 + Gaussian noise"]
+    P2 --> D
+    P3 --> D
+    D --> R["server aggregates updates (FedAvg or FedProx), 30 rounds"]
+    R --> G["global model"]
+    G --> Y["per-engine prediction on unseen FD004"]
+    Y --> K["KG facts: active symptoms + actions"]
+    K --> L["LLM explanation: version A (no KG) or B (with KG)"]
+    L --> C["hallucination checker: supported / unsupported claims"]
 ```
 
 ## Key results
@@ -106,8 +105,8 @@ Requires Python 3.10+, and PyTorch installed **separately** (platform/CUDA
 specific — it is deliberately not pinned in `requirements.txt`).
 
 ```powershell
-git clone <this-repo> FedKG-Maint
-cd FedKG-Maint
+git clone https://github.com/OmarElHawy/Fedkg-Maint.git
+cd Fedkg-Maint
 python -m venv .venv
 .venv\Scripts\Activate.ps1       # Windows; `source .venv/bin/activate` on Linux/macOS
 pip install -r requirements.txt
@@ -118,9 +117,11 @@ pip install torch                # CPU build; for CUDA use the torch.org command
 ## Run
 
 > Raw telemetry is **not** included in the repo (see *Datasets*). To reproduce
-> local training from scratch, place the C-MAPSS zip in `data/raw/` and the
-> Azure CSVs in `data/raw/azure/` first — otherwise all checkpoints and results
-> are already in `results/`.
+> local training from scratch, put the extracted C-MAPSS text files
+> (`train_FD001.txt`, `test_FD001.txt`, `RUL_FD001.txt`, ... for FD001-FD004) in
+> `data/raw/cmapss/` and the five Azure CSV files (`PdM_*.csv`) in
+> `data/raw/azure/` first. The final tables, figures and logs are already in
+> `results/`, and one small demo checkpoint is in `models/`.
 
 ```powershell
 # 1) Optional: rebuild the knowledge graphs (one per factory) — read-only steps
@@ -171,7 +172,7 @@ The first cell of each notebook defines three flags:
 - `RERUN_HEAVY = False` *(default)*: loads saved results from `results/final/` and reproduces all tables and figures. Runs **without raw data, without a GPU, and without Ollama** in ~12 seconds.
 - `RERUN_HEAVY = True`: retrains from raw data (estimated runtime printed at top; outputs written to `results_rerun/` unless `OVERWRITE = True`). Requires raw datasets in `data/raw/` or configured via `FEDKG_DATA_DIR`.
 - `OVERWRITE = False`: safety guard preventing overwriting existing results when `RERUN_HEAVY = True`.
-- `SMOKE = True`: runs a tiny real training using the clean functions in `src/` (C-MAPSS: 2 federated FedProx rounds on FD001–FD003 evaluated on FD004, plus one DP round with σ=0.03; Azure: 2 FedAvg rounds on model1–3 evaluated on model4; explanations: 3 engines from cache). It needs the data (`FEDKG_DATA_DIR` or processed data) and a CPU or GPU, takes ~1–2 minutes, writes strictly to `results_smoke/`, and its scores (e.g. FD004 RMSE ~88.7, model4 PR-AUC ~0.008) are intentionally poor and not comparable to the saved results.
+- `SMOKE = True`: runs a tiny real training using the clean functions in `src/` (C-MAPSS: 2 federated FedProx rounds on FD001–FD003 evaluated on FD004, plus one DP round with σ=0.03; Azure: 2 FedAvg rounds on model1–3 evaluated on model4; explanations: 3 engines from cache). It needs the data (`FEDKG_DATA_DIR` or processed data) and a CPU or GPU, takes about 15 seconds on the development machine (RTX 3060), writes strictly to `results_smoke/`, and its scores (e.g. FD004 RMSE ~88.7, model4 PR-AUC ~0.008) are intentionally poor and not comparable to the saved results.
 
 ### External Data Configuration (`FEDKG_DATA_DIR`)
 Raw telemetry data is omitted from the repository to keep the footprint small (~9 MB). If you wish to retrain from scratch (`RERUN_HEAVY = True`), set the environment variable pointing to your raw data directory:
@@ -223,9 +224,10 @@ models/            Single small demo checkpoint (fedprox_fd_seed0.pt)
   Propagation Modeling for Aircraft Engine Run-to-Failure Simulation*, IEEE
   PHM 2008 — dataset page:
   <https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/>
-  (`.zip` copy is in the repo root; raw data is not committed to git).
+  (raw data is not committed to git; download it and extract the files into
+  `data/raw/cmapss/`).
 - **Azure Predictive Maintenance (Kaggle)**:
-  <https://www.kaggle.com/datasets/vinculum-in-datascience/azure-predictive-maintenance>
+  <https://www.kaggle.com/datasets/arnabbiswas1/microsoft-azure-predictive-maintenance>
   (raw CSVs go to `data/raw/azure/`; not committed).
 
 Both datasets are public benchmark data. Check the license and terms on each dataset page before reuse.
