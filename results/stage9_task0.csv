@@ -1,0 +1,5 @@
+setting,model,machines,stats_train_pos,stats_train_n,hand_labeled_pos,hand_train_samples,lib_labeled_pos,match_stats_hand,match_stats_lib
+next24h,model1,16,2659,92464,2659,92464,2659,True,True
+next24h,model4,32,2659,184928,2659,184928,2659,True,True
+gap24_48h,model1,16,2659,92080,2659,92080,2659,True,True
+gap24_48h,model4,32,2659,184160,2659,184160,2659,True,True

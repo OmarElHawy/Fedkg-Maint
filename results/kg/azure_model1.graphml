@@ -1,0 +1,642 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d23" for="edge" attr.name="supporting_windows" attr.type="long"/>
+<key id="d22" for="edge" attr.name="consistency_ratio" attr.type="double"/>
+<key id="d21" for="edge" attr.name="mean_z" attr.type="double"/>
+<key id="d20" for="edge" attr.name="supporting_replacements" attr.type="long"/>
+<key id="d19" for="edge" attr.name="p_base" attr.type="double"/>
+<key id="d18" for="edge" attr.name="p_cond" attr.type="double"/>
+<key id="d17" for="edge" attr.name="total_failures" attr.type="long"/>
+<key id="d16" for="edge" attr.name="supporting_events" attr.type="long"/>
+<key id="d15" for="edge" attr.name="lift" attr.type="double"/>
+<key id="d14" for="edge" attr.name="source" attr.type="string"/>
+<key id="d13" for="edge" attr.name="relation" attr.type="string"/>
+<key id="d12" for="node" attr.name="direction" attr.type="string"/>
+<key id="d11" for="node" attr.name="sensor" attr.type="string"/>
+<key id="d10" for="node" attr.name="component" attr.type="string"/>
+<key id="d9" for="node" attr.name="machine_id" attr.type="long"/>
+<key id="d8" for="node" attr.name="label" attr.type="string"/>
+<key id="d7" for="node" attr.name="type" attr.type="string"/>
+<key id="d6" for="graph" attr.name="healthy_stds" attr.type="string"/>
+<key id="d5" for="graph" attr.name="healthy_means" attr.type="string"/>
+<key id="d4" for="graph" attr.name="base_error_rates" attr.type="string"/>
+<key id="d3" for="graph" attr.name="train_end" attr.type="string"/>
+<key id="d2" for="graph" attr.name="schema_version" attr.type="long"/>
+<key id="d1" for="graph" attr.name="dataset" attr.type="string"/>
+<key id="d0" for="graph" attr.name="factory" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">model1</data>
+<data key="d1">Azure Predictive Maintenance</data>
+<data key="d2">2</data>
+<data key="d3">2015-09-01 00:00:00</data>
+<data key="d4">{"error1": 0.02765619636113972, "error2": 0.025735925163062136, "error3": 0.023794198420871954, "error4": 0.024555870236869205, "error5": 0.012358393408856848}</data>
+<data key="d5">{"volt": 170.51565641649813, "rotate": 447.86011138161655, "pressure": 100.60604594091555, "vibration": 40.299726152314285}</data>
+<data key="d6">{"volt": 9.246855029214606, "rotate": 31.820923214753297, "pressure": 6.961357329300928, "vibration": 3.317043687966139}</data>
+<node id="Machine_13">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_13</data>
+  <data key="d9">13</data>
+</node>
+<node id="Machine_16">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_16</data>
+  <data key="d9">16</data>
+</node>
+<node id="Machine_17">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_17</data>
+  <data key="d9">17</data>
+</node>
+<node id="Machine_22">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_22</data>
+  <data key="d9">22</data>
+</node>
+<node id="Machine_23">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_23</data>
+  <data key="d9">23</data>
+</node>
+<node id="Machine_24">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_24</data>
+  <data key="d9">24</data>
+</node>
+<node id="Machine_31">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_31</data>
+  <data key="d9">31</data>
+</node>
+<node id="Machine_35">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_35</data>
+  <data key="d9">35</data>
+</node>
+<node id="Machine_37">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_37</data>
+  <data key="d9">37</data>
+</node>
+<node id="Machine_42">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_42</data>
+  <data key="d9">42</data>
+</node>
+<node id="Machine_49">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_49</data>
+  <data key="d9">49</data>
+</node>
+<node id="Machine_56">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_56</data>
+  <data key="d9">56</data>
+</node>
+<node id="Machine_58">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_58</data>
+  <data key="d9">58</data>
+</node>
+<node id="Machine_85">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_85</data>
+  <data key="d9">85</data>
+</node>
+<node id="Machine_92">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_92</data>
+  <data key="d9">92</data>
+</node>
+<node id="Machine_99">
+  <data key="d7">Machine</data>
+  <data key="d8">Machine_99</data>
+  <data key="d9">99</data>
+</node>
+<node id="comp1">
+  <data key="d7">Component</data>
+  <data key="d8">comp1</data>
+</node>
+<node id="comp2">
+  <data key="d7">Component</data>
+  <data key="d8">comp2</data>
+</node>
+<node id="comp3">
+  <data key="d7">Component</data>
+  <data key="d8">comp3</data>
+</node>
+<node id="comp4">
+  <data key="d7">Component</data>
+  <data key="d8">comp4</data>
+</node>
+<node id="volt">
+  <data key="d7">Sensor</data>
+  <data key="d8">volt</data>
+</node>
+<node id="rotate">
+  <data key="d7">Sensor</data>
+  <data key="d8">rotate</data>
+</node>
+<node id="pressure">
+  <data key="d7">Sensor</data>
+  <data key="d8">pressure</data>
+</node>
+<node id="vibration">
+  <data key="d7">Sensor</data>
+  <data key="d8">vibration</data>
+</node>
+<node id="error1">
+  <data key="d7">ErrorCode</data>
+  <data key="d8">error1</data>
+</node>
+<node id="error2">
+  <data key="d7">ErrorCode</data>
+  <data key="d8">error2</data>
+</node>
+<node id="error3">
+  <data key="d7">ErrorCode</data>
+  <data key="d8">error3</data>
+</node>
+<node id="error4">
+  <data key="d7">ErrorCode</data>
+  <data key="d8">error4</data>
+</node>
+<node id="error5">
+  <data key="d7">ErrorCode</data>
+  <data key="d8">error5</data>
+</node>
+<node id="comp1_failure">
+  <data key="d7">FailureMode</data>
+  <data key="d8">comp1_failure</data>
+  <data key="d10">comp1</data>
+</node>
+<node id="comp2_failure">
+  <data key="d7">FailureMode</data>
+  <data key="d8">comp2_failure</data>
+  <data key="d10">comp2</data>
+</node>
+<node id="comp3_failure">
+  <data key="d7">FailureMode</data>
+  <data key="d8">comp3_failure</data>
+  <data key="d10">comp3</data>
+</node>
+<node id="comp4_failure">
+  <data key="d7">FailureMode</data>
+  <data key="d8">comp4_failure</data>
+  <data key="d10">comp4</data>
+</node>
+<node id="Inspect_comp1">
+  <data key="d7">Action</data>
+  <data key="d8">Inspect comp1</data>
+</node>
+<node id="Replace_comp1">
+  <data key="d7">Action</data>
+  <data key="d8">Replace comp1</data>
+</node>
+<node id="Inspect_comp2">
+  <data key="d7">Action</data>
+  <data key="d8">Inspect comp2</data>
+</node>
+<node id="Replace_comp2">
+  <data key="d7">Action</data>
+  <data key="d8">Replace comp2</data>
+</node>
+<node id="Inspect_comp3">
+  <data key="d7">Action</data>
+  <data key="d8">Inspect comp3</data>
+</node>
+<node id="Replace_comp3">
+  <data key="d7">Action</data>
+  <data key="d8">Replace comp3</data>
+</node>
+<node id="Inspect_comp4">
+  <data key="d7">Action</data>
+  <data key="d8">Inspect comp4</data>
+</node>
+<node id="Replace_comp4">
+  <data key="d7">Action</data>
+  <data key="d8">Replace comp4</data>
+</node>
+<node id="volt_rising">
+  <data key="d7">Symptom</data>
+  <data key="d8">volt_rising</data>
+  <data key="d11">volt</data>
+  <data key="d12">rising</data>
+</node>
+<node id="rotate_falling">
+  <data key="d7">Symptom</data>
+  <data key="d8">rotate_falling</data>
+  <data key="d11">rotate</data>
+  <data key="d12">falling</data>
+</node>
+<node id="pressure_rising">
+  <data key="d7">Symptom</data>
+  <data key="d8">pressure_rising</data>
+  <data key="d11">pressure</data>
+  <data key="d12">rising</data>
+</node>
+<node id="vibration_rising">
+  <data key="d7">Symptom</data>
+  <data key="d8">vibration_rising</data>
+  <data key="d11">vibration</data>
+  <data key="d12">rising</data>
+</node>
+<edge source="Machine_13" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_13" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_13" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_13" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_16" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_16" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_16" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_16" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_17" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_17" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_17" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_17" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_22" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_22" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_22" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_22" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_23" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_23" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_23" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_23" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_24" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_24" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_24" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_24" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_31" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_31" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_31" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_31" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_35" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_35" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_35" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_35" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_37" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_37" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_37" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_37" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_42" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_42" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_42" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_42" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_49" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_49" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_49" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_49" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_56" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_56" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_56" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_56" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_58" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_58" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_58" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_58" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_85" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_85" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_85" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_85" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_92" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_92" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_92" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_92" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_99" target="comp1" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_99" target="comp2" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_99" target="comp3" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="Machine_99" target="comp4" id="0">
+  <data key="d13">has_component</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="volt" target="volt_rising" id="0">
+  <data key="d13">shows</data>
+  <data key="d14">data</data>
+</edge>
+<edge source="rotate" target="rotate_falling" id="0">
+  <data key="d13">shows</data>
+  <data key="d14">data</data>
+</edge>
+<edge source="pressure" target="pressure_rising" id="0">
+  <data key="d13">shows</data>
+  <data key="d14">data</data>
+</edge>
+<edge source="vibration" target="vibration_rising" id="0">
+  <data key="d13">shows</data>
+  <data key="d14">data</data>
+</edge>
+<edge source="error1" target="comp1_failure" id="0">
+  <data key="d13">precedes</data>
+  <data key="d14">data</data>
+  <data key="d15">31.819270752521334</data>
+  <data key="d16">22</data>
+  <data key="d17">25</data>
+  <data key="d18">0.88</data>
+  <data key="d19">0.02765619636113972</data>
+</edge>
+<edge source="error2" target="comp2_failure" id="0">
+  <data key="d13">precedes</data>
+  <data key="d14">data</data>
+  <data key="d15">37.41707192811819</data>
+  <data key="d16">26</data>
+  <data key="d17">27</data>
+  <data key="d18">0.9629629629629629</data>
+  <data key="d19">0.025735925163062136</data>
+</edge>
+<edge source="error3" target="comp2_failure" id="0">
+  <data key="d13">precedes</data>
+  <data key="d14">data</data>
+  <data key="d15">40.470493938483116</data>
+  <data key="d16">26</data>
+  <data key="d17">27</data>
+  <data key="d18">0.9629629629629629</data>
+  <data key="d19">0.023794198420871954</data>
+</edge>
+<edge source="error4" target="comp3_failure" id="0">
+  <data key="d13">precedes</data>
+  <data key="d14">data</data>
+  <data key="d15">38.17824377457405</data>
+  <data key="d16">45</data>
+  <data key="d17">48</data>
+  <data key="d18">0.9375</data>
+  <data key="d19">0.024555870236869205</data>
+</edge>
+<edge source="error5" target="comp4_failure" id="0">
+  <data key="d13">precedes</data>
+  <data key="d14">data</data>
+  <data key="d15">77.91975308641975</data>
+  <data key="d16">26</data>
+  <data key="d17">27</data>
+  <data key="d18">0.9629629629629629</data>
+  <data key="d19">0.012358393408856848</data>
+</edge>
+<edge source="comp1_failure" target="comp1" id="0">
+  <data key="d13">affects</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="comp1_failure" target="Inspect_comp1" id="0">
+  <data key="d13">fixed_by</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="comp1_failure" target="Replace_comp1" id="0">
+  <data key="d13">fixed_by</data>
+  <data key="d14">data</data>
+  <data key="d20">22</data>
+  <data key="d17">25</data>
+</edge>
+<edge source="comp2_failure" target="comp2" id="0">
+  <data key="d13">affects</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="comp2_failure" target="Inspect_comp2" id="0">
+  <data key="d13">fixed_by</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="comp2_failure" target="Replace_comp2" id="0">
+  <data key="d13">fixed_by</data>
+  <data key="d14">data</data>
+  <data key="d20">26</data>
+  <data key="d17">27</data>
+</edge>
+<edge source="comp3_failure" target="comp3" id="0">
+  <data key="d13">affects</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="comp3_failure" target="Inspect_comp3" id="0">
+  <data key="d13">fixed_by</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="comp3_failure" target="Replace_comp3" id="0">
+  <data key="d13">fixed_by</data>
+  <data key="d14">data</data>
+  <data key="d20">45</data>
+  <data key="d17">48</data>
+</edge>
+<edge source="comp4_failure" target="comp4" id="0">
+  <data key="d13">affects</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="comp4_failure" target="Inspect_comp4" id="0">
+  <data key="d13">fixed_by</data>
+  <data key="d14">domain_knowledge</data>
+</edge>
+<edge source="comp4_failure" target="Replace_comp4" id="0">
+  <data key="d13">fixed_by</data>
+  <data key="d14">data</data>
+  <data key="d20">26</data>
+  <data key="d17">27</data>
+</edge>
+<edge source="volt_rising" target="comp1_failure" id="0">
+  <data key="d13">indicates</data>
+  <data key="d14">data</data>
+  <data key="d21">2.242441774744447</data>
+  <data key="d22">0.5740131578947368</data>
+  <data key="d23">608</data>
+</edge>
+<edge source="rotate_falling" target="comp2_failure" id="0">
+  <data key="d13">indicates</data>
+  <data key="d14">data</data>
+  <data key="d21">-2.565533290820926</data>
+  <data key="d22">0.7298507462686568</data>
+  <data key="d23">670</data>
+</edge>
+<edge source="pressure_rising" target="comp3_failure" id="0">
+  <data key="d13">indicates</data>
+  <data key="d14">data</data>
+  <data key="d21">3.678424381288981</data>
+  <data key="d22">0.9772151898734177</data>
+  <data key="d23">1185</data>
+</edge>
+<edge source="vibration_rising" target="comp4_failure" id="0">
+  <data key="d13">indicates</data>
+  <data key="d14">data</data>
+  <data key="d21">3.1180099704168676</data>
+  <data key="d22">0.8865671641791045</data>
+  <data key="d23">670</data>
+</edge>
+</graph></graphml>

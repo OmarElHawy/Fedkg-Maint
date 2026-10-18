@@ -1,0 +1,33 @@
+# Stage 8 Azure PdM federated experiments
+# Label window per setting (hours): predict 1 if failure in (t+gap, t+gap+horizon]
+settings:
+  next24h:
+    gap_h: 0
+    horizon_h: 24
+  gap24_48h:
+    gap_h: 24
+    horizon_h: 24
+
+data:
+  clients: [model1, model2, model3]
+  heldout: model4
+  train_end: "2015-09-01"
+  val_end: "2015-11-01"
+
+model:
+  input_dim: 26
+  hidden: 64
+  dropout: 0.2
+  lr: 1.0e-3
+  batch_size: 1024
+
+local_training:
+  max_epochs: 40
+  patience: 6
+
+federated:
+  rounds: 30
+  local_epochs: 1
+  mu_grid: [0.001, 0.01, 0.1]   # FedProx; chosen on client val PR-AUC seed 0
+
+seeds: [0, 1, 2]

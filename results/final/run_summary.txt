@@ -1,0 +1,48 @@
+================================================================
+Stage 9 final evaluation summary
+================================================================
+-- C-MAPSS FD004 RMSE (5 seeds) --
+  Local FD001   22.911 ± 0.785 (n=5)
+  Local FD002   25.766 ± 2.008 (n=5)
+  Local FD003   20.799 ± 0.530 (n=5)
+  Centralized   17.851 ± 0.950 (n=5)
+  FedAvg        20.240 ± 0.644 (n=5)
+  FedProx       17.905 ± 0.963 (n=5)
+  DP 0.03       18.591 ± 0.703 (n=5)
+  DP 0.1        22.904 ± 4.203 (n=5)
+-- DP / epsilon --
+  FedProx   eps=inf        17.905 ± 0.963
+  DP 0.03   eps=17543.39   18.591 ± 0.703
+  DP 0.1    eps=1762.85    22.904 ± 4.203
+-- paired tests over seeds (Holm-corrected) --
+  FedProx - FedAvg             diff=-2.334 p=0.0086 (holm 0.0342) d=-2.15
+  FedProx - Centralized        diff=+0.055 p=0.9473 (holm 0.9473) d=+0.03
+  FedAvg - Centralized         diff=+2.389 p=0.0051 (holm 0.0256) d=+2.49
+  DP 0.03 - FedProx            diff=+0.686 p=0.0359 (holm 0.0800) d=+1.39
+  DP 0.1 - FedProx             diff=+4.998 p=0.0267 (holm 0.0800) d=+1.53
+-- engine-level (FD004, 248 engines) --
+  FedProx vs FedAvg            diff=-0.260 CI[-1.31,0.77] p=0.8555
+  FedProx vs Centralized       diff=+1.253 CI[0.42,2.12] p=0.006286
+  FedAvg vs Centralized        diff=+1.513 CI[0.37,2.67] p=0.005581
+  DP 0.03 vs FedProx           diff=+0.710 CI[0.42,0.99] p=7.076e-06
+  DP 0.1 vs FedProx            diff=+4.021 CI[3.33,4.71] p=1.226e-21
+-- Azure held-out test PR-AUC (seeds 0-4) --
+  next24h    LocalOnly   0.945 ± 0.040
+  next24h    Centralized 0.974 ± 0.010
+  next24h    FedAvg      0.986 ± 0.004
+  next24h    FedProx     0.975 ± 0.010
+  gap24_48h  LocalOnly   0.181 ± 0.076
+  gap24_48h  Centralized 0.274 ± 0.019
+  gap24_48h  FedAvg      0.287 ± 0.023
+  gap24_48h  FedProx     0.287 ± 0.025
+-- explanations (A vs B hallucination) --
+  sample 42 A: 0.250 [0.150, 0.367]
+  sample 42 B: 0.000 [0.000, 0.000]
+  sample 43 A: 0.217 [0.117, 0.333]
+  sample 43 B: 0.033 [0.000, 0.083]
+  sample 44 A: 0.300 [0.183, 0.417]
+  sample 44 B: 0.033 [0.000, 0.083]
+-- communication cost (30 rounds) --
+  C-MAPSS (LSTM)     12.9180 MB total (0.4306 MB/client/round)
+  Azure (MLP)        4.2862 MB total (0.1429 MB/client/round)
+================================================================

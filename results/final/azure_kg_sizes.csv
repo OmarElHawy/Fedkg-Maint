@@ -1,0 +1,5 @@
+factory,nodes,edges,n_error_codes,n_failure_modes,n_symptoms,n_components,n_machines,n_precedes_edges
+model1,45,89,5,4,4,4,16,5
+model2,46,94,5,4,4,4,17,6
+model3,63,164,5,4,3,4,35,6
+model4,60,151,5,4,3,4,32,5

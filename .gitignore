@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.zip
+*.rar
+*.7z
+
+# Raw + regenerated datasets (largest files are 57-175 MB). Kept out of git;
+# download per README (data/raw) or rebuild with src/preprocess.py (data/processed).
+data/
+notebooks/data/
+
+# Trained model states — big + regenerable. The single small demo checkpoint in
+# models/fedprox_fd_seed0.pt IS committed.
+results/checkpoints/

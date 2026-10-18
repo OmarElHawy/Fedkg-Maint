@@ -1,0 +1,18 @@
+# Stage 6 knowledge-graph settings (shared by all factories).
+#
+# Symptom activity: for a window, take the mean of the LAST_N_STEPS sensor
+# values, convert to a z-score against the factory's healthy baseline, and call
+# the symptom ACTIVE when |z| exceeds Z_THRESHOLD and the sign matches the
+# factory's data-derived degradation direction for that sensor.
+symptom:
+  last_n_steps: 5
+  z_threshold: 2.0
+
+# Risk level from a predicted RUL (cycles).
+risk:
+  high_max_rul: 30      # RUL <= 30  -> HIGH
+  medium_max_rul: 70    # RUL <= 70  -> MEDIUM, otherwise LOW
+
+# get_facts() returns at most this many active symptoms (ranked by |z|).
+facts:
+  top_k: 5

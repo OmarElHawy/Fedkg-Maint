@@ -1,0 +1,7 @@
+{
+  "expected": 16.502083720307283,
+  "reproduced": 16.502083720307283,
+  "abs_diff": 0.0,
+  "passed": true,
+  "runtime_s": 161.09298300743103
+}

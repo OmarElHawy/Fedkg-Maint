@@ -1,0 +1,83 @@
+# Shared knowledge-graph schema (ontology) used by every factory.
+#
+# NOTE (honesty): the sensor -> component mapping below is a domain assumption
+# from the public C-MAPSS documentation (SMAP/MSPHM context). It is a
+# SIMPLIFICATION and should be double-checked against the dataset readme.
+
+node_types:
+  - Machine
+  - Component
+  - Sensor
+  - FailureMode
+  - Symptom
+  - Action
+  - ErrorCode
+
+# Relation types. "indicates" is the primary data-driven symptom -> failure
+# link; "indicates_secondary" is a weaker, explicitly-justified link; "affects"
+# connects a failure mode to the component it degrades; "precedes" links an
+# error code to the failure mode it statistically precedes.
+relations:
+  has_component:       {from: Machine,     to: Component}
+  monitored_by:        {from: Component,    to: Sensor}
+  shows:               {from: Sensor,      to: Symptom}
+  indicates:           {from: Symptom,     to: FailureMode}
+  indicates_secondary: {from: Symptom,     to: FailureMode}
+  affects:             {from: FailureMode, to: Component}
+  fixed_by:            {from: FailureMode, to: Action}
+  precedes:            {from: ErrorCode,   to: FailureMode}
+
+# Every edge also carries source = "domain_knowledge" or "data".
+
+# Sensors kept by the preprocessing, in arrays.npz column order.
+sensors:
+  s2:  {desc: "T24, LPC outlet temperature",   component: LPC}
+  s3:  {desc: "T30, HPC outlet temperature",   component: HPC}
+  s4:  {desc: "T50, LPT outlet temperature",   component: LPT}
+  s7:  {desc: "P30, HPC outlet pressure",      component: HPC}
+  s8:  {desc: "Nf, physical fan speed",        component: Fan}
+  s9:  {desc: "Nc, physical core speed",       component: Core}
+  s11: {desc: "Ps30, HPC static pressure",     component: HPC}
+  s12: {desc: "phi, fuel flow to Ps30 ratio",  component: HPC}
+  s13: {desc: "NRf, corrected fan speed",      component: Fan}
+  s14: {desc: "NRc, corrected core speed",     component: Core}
+  s15: {desc: "BPR, bypass ratio",             component: Fan}
+  s17: {desc: "htBleed, bleed enthalpy",       component: Core}
+  s20: {desc: "W31, HPT coolant bleed",        component: HPT}
+  s21: {desc: "W32, LPT coolant bleed",        component: LPT}
+
+components: [Fan, LPC, HPC, LPT, Core, HPT]
+
+# Failure modes per the dataset description, with the component each degrades
+# and the maintenance actions.
+failure_modes:
+  HPC_degradation:
+    component: HPC
+    actions:
+      - "Inspect compressor blades and clearances"
+      - "Schedule HPC wash or replacement"
+  Fan_degradation:
+    component: Fan
+    actions:
+      - "Inspect fan blades"
+      - "Check fan balance and bearings"
+
+factory_failure_modes:
+  FD001: [HPC_degradation]
+  FD002: [HPC_degradation]
+  FD003: [HPC_degradation, Fan_degradation]
+  FD004: [HPC_degradation, Fan_degradation]
+
+# Secondary symptom -> failure_mode links (weaker than the primary link that
+# follows directly from the shared component). We only claim links we can
+# justify; anything not listed here gets no failure-mode link.
+secondary_failure_links:
+  s9:  [HPC_degradation]
+  s14: [HPC_degradation]
+  s17: [HPC_degradation]
+secondary_justification: >
+  Nc/NRc (core speed) and htBleed (bleed enthalpy) respond as secondary effects
+  of HPC degradation: a loss of HPC efficiency forces the core to run faster and
+  changes bleed conditions. We do NOT claim secondary links for the LPC, LPT or
+  HPT sensors, whose shifts are downstream and not clearly attributable to a
+  single failure mode.

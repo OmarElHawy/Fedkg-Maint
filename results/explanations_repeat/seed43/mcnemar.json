@@ -1,0 +1,9 @@
+{
+  "n_pairs": 60,
+  "A_only_halluc": 13,
+  "B_only_halluc": 2,
+  "p_mcnemar": 0.00738525390625,
+  "sign_pos": 12,
+  "sign_neg": 0,
+  "p_sign": 0.00048828125
+}

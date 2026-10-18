@@ -1,0 +1,5 @@
+factory,prefail_active_share,prefail_n,healthy_active_share,healthy_n,ratio
+model1,1.0,750,0.234,21364,4.27
+model2,1.0,614,0.2333,23241,4.29
+model3,1.0,732,0.2219,49463,4.51
+model4,1.0,700,0.2471,45070,4.05

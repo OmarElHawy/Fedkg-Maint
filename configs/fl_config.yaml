@@ -1,0 +1,13 @@
+# Federated learning configuration selected in Stage 4b.
+# Selection used ONLY the validation RMSE of the three training clients
+# (FD001/FD002/FD003), weighted by number of validation windows.
+# FD004 was never used to choose any of these values.
+rounds: 30
+local_epochs: 2
+learning_rate: 0.001
+batch_size: 256
+selected_mu: 0.01
+selection_metric: weighted_client_validation_rmse
+selection_round: 50
+selection_seeds: [0]
+final_report_seeds: [0, 1, 2]

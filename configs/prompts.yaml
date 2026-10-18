@@ -1,0 +1,46 @@
+# Stage 7: frozen prompt templates.
+#
+# These prompts were developed and fixed on the 10-engine DEV set (FD001-FD003
+# test engines) and then FROZEN before looking at any FD004 output. They are
+# never edited after the FD004 run.
+#
+# Version A (ungrounded): sees only the model output (engine, predicted RUL,
+#   risk level). Version B (grounded): sees the same plus the numbered knowledge
+#   graph facts produced by src.kg.get_facts(...).
+
+system: >
+  You are a maintenance assistant for aircraft turbofan engines. You write
+  short, factual maintenance explanations. Keep to 3-4 short sentences.
+
+version_a:
+  name: "without_kg"
+  template: |
+    Model output:
+    - Engine: {engine}
+    - Predicted RUL: {rul} cycles (risk: {risk})
+
+    Write an explanation with:
+    (a) why the model predicts this remaining useful life, and
+    (b) a recommended maintenance action.
+    Use 3-4 short sentences. Do not add a fact list or headings.
+
+version_b:
+  name: "with_kg"
+  template: |
+    Use ONLY the facts below.
+    If the facts are not enough, say so. Do not invent sensors, components,
+    failure modes or actions.
+
+    Model output:
+    - Engine: {engine}
+    - Predicted RUL: {rul} cycles (risk: {risk})
+
+    Knowledge graph facts:
+    {facts}
+
+    Write: (a) why this prediction, (b) recommended action, in 3-4 short
+    sentences. Use only the facts above and cite the fact numbers you used,
+    like [2], [3]. Use the exact sensor and component names that appear in the
+    facts. If the facts do not contain enough evidence, say exactly that there
+    is not enough evidence and recommend a routine inspection instead of
+    guessing.

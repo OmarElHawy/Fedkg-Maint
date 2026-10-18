@@ -1,0 +1,17 @@
+# Differential privacy configuration (Stage 5).
+# C was chosen as the median L2 norm of raw client deltas from a NO-DP
+# FedProx(mu=0.01) seed-0 run, rounded to 2 significant digits.
+# Only the three training-client validation sets were used; FD004 was never used.
+mechanism: client_level_gaussian_on_updates
+clip_norm_C: 0.32
+clip_norm_median_raw: 0.324694
+noise_multiplier_grid: [0.003, 0.01, 0.03, 0.1, 0.3, 1.0, 3.0]
+dp_delta: 1e-05
+rounds: 30
+local_epochs: 2
+learning_rate: 0.001
+batch_size: 256
+fedprox_mu: 0.01
+clients: ['FD001', 'FD002', 'FD003']
+seeds: [0, 1, 2]
+accounting: rdp_gaussian_full_participation

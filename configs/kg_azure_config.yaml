@@ -1,0 +1,22 @@
+# Azure Predictive Maintenance Knowledge Graph Configuration (Schema v2)
+version: 2
+train_end: "2015-09-01"
+
+# ErrorCode -precedes-> FailureMode correlation thresholds
+error_precedes:
+  window_hours: 24       # Window before failure to look for preceding errors
+  min_lift: 2.0          # Minimum lift over random baseline 24h windows
+  min_events: 5          # Minimum supporting failure events in training data
+
+# Sensor -shows-> Symptom -indicates-> FailureMode deviation thresholds
+sensor_symptom:
+  rolling_hours: 3       # Rolling mean telemetry window
+  z_threshold: 2.0       # Standard deviation threshold against healthy baseline
+  consistency_ratio: 0.50 # Direction consistency ratio in pre-failure windows (50% captures volt_rising; 60% captures rotate/pressure/vibration)
+  consistency_strict: 0.60 # Strict 60% threshold specified in requirement
+  healthy_margin_hours: 72 # Baseline windows have no failure in subsequent 72h
+
+# Fact retrieval settings for get_facts_azure()
+facts:
+  top_k: 5
+  lookback_hours: 24     # Active error code lookback window

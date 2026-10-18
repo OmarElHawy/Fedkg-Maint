@@ -1,0 +1,36 @@
+[
+  {
+    "engine": 77,
+    "predicted_rul": 38.638160705566406,
+    "true_rul": 25.0,
+    "n_unsupported": 0,
+    "n_claims": 3,
+    "unsupported": [],
+    "reasons": [
+      "RUL 77 != predicted 39.0"
+    ],
+    "explanation": "(a) The predicted Remaining Useful Life (RUL) of Engine 77 is 39 cycles, with a medium risk level, due to the rising temperature of the Low Pressure Turbine (LPT) outlet temperature, as indicated by sensor s4 [3, 4]. The LPT is a component of Engine 77 [2]. The rising temperature suggests a potential issue with the engine. \n\n(b) Recommended action: Due to the lack of specific failure modes or actions associated with the rising LPT outlet temperature, and the limited information provided, it is not possible to recommend a specific action. A routine inspection of Engine 77 is recommended to further assess the condition of the LPT and other components."
+  },
+  {
+    "engine": 43,
+    "predicted_rul": 53.14805603027344,
+    "true_rul": 42.0,
+    "n_unsupported": 0,
+    "n_claims": 1,
+    "unsupported": [],
+    "reasons": [
+      "RUL 43 != predicted 53.0"
+    ],
+    "explanation": "(a) The predicted Remaining Useful Life (RUL) of Engine_43 is 53 cycles with a medium risk level, as indicated by fact [1]. This prediction is based on the engine's performance data, but the specific factors contributing to this prediction are not specified. There is no information available on the performance of the engine's sensors, such as the oil pressure sensor or fuel pressure sensor, to support this prediction (fact [2]). Without more information, it is not possible to determine the exact cause of this prediction.\n\n(b) Due to the lack of specific information on the engine's condition, a routine inspection is recommended to assess the engine's health and determine the cause of the predicted RUL. This will provide a more accurate assessment of the engine's condition and inform any necessary repairs or maintenance."
+  },
+  {
+    "engine": 244,
+    "predicted_rul": 31.71773338317871,
+    "true_rul": 35.0,
+    "n_unsupported": 0,
+    "n_claims": 11,
+    "unsupported": [],
+    "reasons": [],
+    "explanation": "(a) The predicted RUL of 32 cycles for Engine 244 is based on the rising values of sensors s14 (NRc, corrected core speed) and s9 (Nc, physical core speed), indicating potential issues with the Core component ([3], [4], [6]). The rising values of sensors s13 (NRf, corrected fan speed) and s8 (Nf, physical fan speed) suggest potential issues with the Fan component ([7], [8], [10]). However, there is not enough evidence to determine the specific cause of the rising values.\n\n(b) Due to the rising values of sensors s14 and s9, which indicate potential issues with the Core component, we recommend Inspect compressor blades and clearances; Schedule HPC wash or replacement ([15]). This action is based on the fact that a rising s14 indicates HPC_degradation ([13])."
+  }
+]

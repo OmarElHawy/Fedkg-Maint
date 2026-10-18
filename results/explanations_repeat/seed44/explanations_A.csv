@@ -1,0 +1,543 @@
+factory,split,index,engine,predicted_rul,risk_level,true_rul,version,prompt,explanation,ref_facts
+FD004,test,7,8,5.049407482147217,HIGH,14.0,A,"Model output:
+- Engine: Engine_8
+- Predicted RUL: 5 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a Remaining Useful Life (RUL) of 5 cycles for Engine_8 due to the high risk of failure, indicating that the engine is nearing the end of its service life. This prediction is likely based on the engine's age, usage, and any previous maintenance issues. The high risk of failure suggests that the engine's condition is deteriorating rapidly, making prompt maintenance necessary. A recommended maintenance action is to inspect and replace the engine's compressor blades, which are the most critical component in the engine's high-pressure compressor section.","['[1] Predicted RUL is 5 cycles -> risk level HIGH', '[2] Engine 8 has component Core', '[3] Core is monitored by sensor s9 (Nc, physical core speed)', '[4] Sensor s9 is rising (6.4 std above healthy level)', '[5] Core is monitored by sensor s14 (NRc, corrected core speed)', '[6] Sensor s14 is rising (5.7 std above healthy level)', '[7] Fan is monitored by sensor s8 (Nf, physical fan speed)', '[8] Sensor s8 is rising (4.5 std above healthy level)', '[9] Fan is monitored by sensor s13 (NRf, corrected fan speed)', '[10] Sensor s13 is rising (4.3 std above healthy level)', '[11] HPC is monitored by sensor s11 (Ps30, HPC static pressure)', '[12] Sensor s11 is rising (3.4 std above healthy level)', '[13] A rising s9 indicates HPC_degradation (secondary evidence)', '[14] A rising s8 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,14,15,33.12744140625,MEDIUM,12.0,A,"Model output:
+- Engine: Engine_15
+- Predicted RUL: 33 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 33 cycles for Engine_15 due to the engine's current condition and operating history, indicating moderate wear and tear. The medium risk level suggests that the engine is still within a safe operating range, but requires closer monitoring. To ensure optimal performance and prevent potential failure, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval. This will allow for proactive maintenance and minimize the risk of unexpected engine failure.","['[1] Predicted RUL is 33 cycles -> risk level MEDIUM', '[2] Engine 15 has component Core', '[3] Core is monitored by sensor s14 (NRc, corrected core speed)', '[4] Sensor s14 is rising (4.8 std above healthy level)', '[5] Core is monitored by sensor s9 (Nc, physical core speed)', '[6] Sensor s9 is rising (4.7 std above healthy level)', '[7] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[8] Sensor s12 is rising (4.7 std above healthy level)', '[9] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[10] Sensor s7 is rising (4.7 std above healthy level)', '[11] Fan is monitored by sensor s15 (BPR, bypass ratio)', '[12] Sensor s15 is falling (4.3 std below healthy level)', '[13] A rising s14 indicates HPC_degradation (secondary evidence)', '[14] A falling s15 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,21,22,9.676005363464355,HIGH,11.0,A,"Model output:
+- Engine: Engine_22
+- Predicted RUL: 10 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 10 cycles for Engine_22 due to the high risk of failure, indicating that the engine is nearing the end of its service life. This is likely due to the engine's age, usage, and potential accumulation of wear and tear. The high risk of failure suggests that the engine's condition is deteriorating rapidly. To mitigate this risk, we recommend inspecting the engine's compressor blades and turbine vanes for signs of excessive wear or damage.","['[1] Predicted RUL is 10 cycles -> risk level HIGH', '[2] Engine 22 has component Core', '[3] Core is monitored by sensor s9 (Nc, physical core speed)', '[4] Sensor s9 is rising (5.4 std above healthy level)', '[5] Core is monitored by sensor s14 (NRc, corrected core speed)', '[6] Sensor s14 is rising (5.3 std above healthy level)', '[7] Fan is monitored by sensor s13 (NRf, corrected fan speed)', '[8] Sensor s13 is rising (4.4 std above healthy level)', '[9] Fan is monitored by sensor s8 (Nf, physical fan speed)', '[10] Sensor s8 is rising (4.3 std above healthy level)', '[11] HPC is monitored by sensor s11 (Ps30, HPC static pressure)', '[12] Sensor s11 is rising (3.4 std above healthy level)', '[13] A rising s9 indicates HPC_degradation (secondary evidence)', '[14] A rising s13 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,30,31,17.83340835571289,HIGH,6.0,A,"Model output:
+- Engine: Engine_31
+- Predicted RUL: 18 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 18 cycles for Engine_31 due to the high risk of failure, indicating that the engine is nearing the end of its service life. This prediction is likely based on the engine's age, usage, and any previous maintenance issues. The high risk of failure suggests that the engine's condition is deteriorating rapidly, making prompt maintenance necessary. A recommended maintenance action is to inspect and replace the engine's compressor blades, which are the most critical components, to prevent catastrophic failure.","['[1] Predicted RUL is 18 cycles -> risk level HIGH', '[2] Engine 31 has component LPT', '[3] LPT is monitored by sensor s4 (T50, LPT outlet temperature)', '[4] Sensor s4 is rising (3.6 std above healthy level)', '[5] HPC is monitored by sensor s11 (Ps30, HPC static pressure)', '[6] Sensor s11 is rising (3.6 std above healthy level)', '[7] HPC is monitored by sensor s3 (T30, HPC outlet temperature)', '[8] Sensor s3 is rising (2.9 std above healthy level)', '[9] LPC is monitored by sensor s2 (T24, LPC outlet temperature)', '[10] Sensor s2 is rising (2.9 std above healthy level)', '[11] Core is monitored by sensor s17 (htBleed, bleed enthalpy)', '[12] Sensor s17 is rising (2.7 std above healthy level)', '[13] A rising s11 indicates HPC_degradation', '[14] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement']"
+FD004,test,37,38,20.248525619506836,HIGH,11.0,A,"Model output:
+- Engine: Engine_38
+- Predicted RUL: 20 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life of 20 cycles for Engine_38 due to the high risk of failure, indicating a potential issue with the engine's compressor or turbine. This prediction is likely based on historical data and engine performance trends. To mitigate this risk, we recommend inspecting the engine's compressor blades and turbine vanes for signs of wear or damage, and performing a routine oil change to ensure optimal engine performance.","['[1] Predicted RUL is 20 cycles -> risk level HIGH', '[2] Engine 38 has component HPC', '[3] HPC is monitored by sensor s11 (Ps30, HPC static pressure)', '[4] Sensor s11 is rising (3.4 std above healthy level)', '[5] LPT is monitored by sensor s4 (T50, LPT outlet temperature)', '[6] Sensor s4 is rising (3.3 std above healthy level)', '[7] HPC is monitored by sensor s3 (T30, HPC outlet temperature)', '[8] Sensor s3 is rising (2.6 std above healthy level)', '[9] A rising s11 indicates HPC_degradation', '[10] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement']"
+FD004,test,39,40,31.474437713623047,MEDIUM,10.0,A,"Model output:
+- Engine: Engine_40
+- Predicted RUL: 31 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 31 cycles for Engine_40 due to the engine's current condition and operating history, indicating a moderate risk of failure. The predicted RUL is likely based on the engine's performance data, which may show signs of wear or degradation. To mitigate this risk, we recommend inspecting the engine's compressor blades and turbine vanes for any signs of excessive wear or damage. This inspection can be performed during the next scheduled maintenance cycle.","['[1] Predicted RUL is 31 cycles -> risk level MEDIUM', '[2] Engine 40 has component HPC', '[3] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[4] Sensor s12 is rising (5.3 std above healthy level)', '[5] Core is monitored by sensor s14 (NRc, corrected core speed)', '[6] Sensor s14 is rising (5.1 std above healthy level)', '[7] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[8] Sensor s7 is rising (5.1 std above healthy level)', '[9] Core is monitored by sensor s9 (Nc, physical core speed)', '[10] Sensor s9 is rising (4.8 std above healthy level)', '[11] Fan is monitored by sensor s13 (NRf, corrected fan speed)', '[12] Sensor s13 is rising (4.4 std above healthy level)', '[13] A rising s12 indicates HPC_degradation', '[14] A rising s13 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,57,58,9.354419708251953,HIGH,8.0,A,"Model output:
+- Engine: Engine_58
+- Predicted RUL: 9 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 9 cycles for Engine_58 due to the high risk of failure, indicating that the engine is nearing the end of its service life. This is likely due to the engine's age and the accumulation of wear and tear over its operational cycles. The high risk of failure suggests that the engine's condition is deteriorating rapidly. To mitigate this risk, we recommend scheduling a routine inspection and maintenance check at the next scheduled maintenance interval.","['[1] Predicted RUL is 9 cycles -> risk level HIGH', '[2] Engine 58 has component HPC', '[3] HPC is monitored by sensor s11 (Ps30, HPC static pressure)', '[4] Sensor s11 is rising (4.6 std above healthy level)', '[5] LPT is monitored by sensor s4 (T50, LPT outlet temperature)', '[6] Sensor s4 is rising (3.8 std above healthy level)', '[7] Core is monitored by sensor s17 (htBleed, bleed enthalpy)', '[8] Sensor s17 is rising (3.0 std above healthy level)', '[9] LPC is monitored by sensor s2 (T24, LPC outlet temperature)', '[10] Sensor s2 is rising (2.9 std above healthy level)', '[11] HPC is monitored by sensor s3 (T30, HPC outlet temperature)', '[12] Sensor s3 is rising (2.9 std above healthy level)', '[13] A rising s11 indicates HPC_degradation', '[14] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement']"
+FD004,test,99,100,20.978412628173828,HIGH,7.0,A,"Model output:
+- Engine: Engine_100
+- Predicted RUL: 21 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 21 cycles for Engine_100 due to the high risk of failure, indicating that the engine is nearing the end of its service life. This is likely due to the engine's age, usage, and potential wear and tear. The high risk of failure suggests that the engine's condition is deteriorating rapidly. As a result, maintenance action is recommended to prevent a catastrophic failure.
+
+Recommended maintenance action: Perform a thorough inspection and replacement of the engine's compressor blades, which are the most critical components prone to failure. This will help to extend the engine's RUL and prevent costly repairs.","['[1] Predicted RUL is 21 cycles -> risk level HIGH', '[2] Engine 100 has component Core', '[3] Core is monitored by sensor s9 (Nc, physical core speed)', '[4] Sensor s9 is rising (5.2 std above healthy level)', '[5] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[6] Sensor s12 is rising (5.2 std above healthy level)', '[7] Core is monitored by sensor s14 (NRc, corrected core speed)', '[8] Sensor s14 is rising (5.1 std above healthy level)', '[9] Fan is monitored by sensor s13 (NRf, corrected fan speed)', '[10] Sensor s13 is rising (4.9 std above healthy level)', '[11] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[12] Sensor s7 is rising (4.7 std above healthy level)', '[13] A rising s9 indicates HPC_degradation (secondary evidence)', '[14] A rising s13 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,113,114,32.555667877197266,MEDIUM,14.0,A,"Model output:
+- Engine: Engine_114
+- Predicted RUL: 33 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 33 cycles for Engine_114 due to the engine's current condition and operating history, indicating moderate wear and tear. The medium risk level suggests that the engine is still within a safe operating range, but requires closer monitoring. To ensure optimal performance and prevent potential failure, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval. This will allow our maintenance team to inspect the engine's condition and perform any necessary repairs or replacements.","['[1] Predicted RUL is 33 cycles -> risk level MEDIUM', '[2] Engine 114 has component Core', '[3] Core is monitored by sensor s9 (Nc, physical core speed)', '[4] Sensor s9 is rising (4.5 std above healthy level)', '[5] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[6] Sensor s12 is rising (4.4 std above healthy level)', '[7] Core is monitored by sensor s14 (NRc, corrected core speed)', '[8] Sensor s14 is rising (4.3 std above healthy level)', '[9] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[10] Sensor s7 is rising (4.2 std above healthy level)', '[11] Fan is monitored by sensor s13 (NRf, corrected fan speed)', '[12] Sensor s13 is rising (3.9 std above healthy level)', '[13] A rising s9 indicates HPC_degradation (secondary evidence)', '[14] A rising s13 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,115,116,16.799327850341797,HIGH,13.0,A,"Model output:
+- Engine: Engine_116
+- Predicted RUL: 17 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 17 cycles for Engine_116 due to the high risk of failure, indicating that the engine is nearing the end of its service life. This is likely due to the engine's age and the accumulation of wear and tear over its operational cycles. The high risk of failure suggests that the engine's condition is deteriorating rapidly, making prompt maintenance necessary. A recommended maintenance action is to inspect and replace the engine's compressor blades, which are the most critical components prone to failure.","['[1] Predicted RUL is 17 cycles -> risk level HIGH', '[2] Engine 116 has component HPC', '[3] HPC is monitored by sensor s11 (Ps30, HPC static pressure)', '[4] Sensor s11 is rising (3.9 std above healthy level)', '[5] LPC is monitored by sensor s2 (T24, LPC outlet temperature)', '[6] Sensor s2 is rising (3.4 std above healthy level)', '[7] LPT is monitored by sensor s4 (T50, LPT outlet temperature)', '[8] Sensor s4 is rising (3.4 std above healthy level)', '[9] Core is monitored by sensor s17 (htBleed, bleed enthalpy)', '[10] Sensor s17 is rising (2.6 std above healthy level)', '[11] HPC is monitored by sensor s3 (T30, HPC outlet temperature)', '[12] Sensor s3 is rising (2.2 std above healthy level)', '[13] A rising s11 indicates HPC_degradation', '[14] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement']"
+FD004,test,117,118,27.805879592895508,HIGH,8.0,A,"Model output:
+- Engine: Engine_118
+- Predicted RUL: 28 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 28 cycles for Engine_118 due to the high risk of failure, indicating that the engine is nearing the end of its service life. This is likely due to the engine's age, usage, and potential accumulation of wear and tear. The high risk of failure suggests that the engine's condition is deteriorating rapidly. To mitigate this risk, we recommend inspecting the engine's compressor blades and turbine vanes for signs of excessive wear or damage.","['[1] Predicted RUL is 28 cycles -> risk level HIGH', '[2] Engine 118 has component HPC', '[3] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[4] Sensor s12 is rising (5.7 std above healthy level)', '[5] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[6] Sensor s7 is rising (5.4 std above healthy level)', '[7] Core is monitored by sensor s9 (Nc, physical core speed)', '[8] Sensor s9 is rising (5.3 std above healthy level)', '[9] Core is monitored by sensor s14 (NRc, corrected core speed)', '[10] Sensor s14 is rising (5.3 std above healthy level)', '[11] Fan is monitored by sensor s15 (BPR, bypass ratio)', '[12] Sensor s15 is falling (4.8 std below healthy level)', '[13] A rising s12 indicates HPC_degradation', '[14] A falling s15 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,154,155,15.019305229187012,HIGH,7.0,A,"Model output:
+- Engine: Engine_155
+- Predicted RUL: 15 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 15 cycles for Engine_155 due to the high risk of failure, indicating that the engine is nearing the end of its service life. This is likely due to the engine's age, usage, and potential accumulation of wear and tear. The high risk of failure suggests that the engine's condition is deteriorating rapidly. To mitigate this risk, we recommend inspecting the engine's compressor blades and turbine vanes for signs of excessive wear or damage.","['[1] Predicted RUL is 15 cycles -> risk level HIGH', '[2] Engine 155 has component HPC', '[3] HPC is monitored by sensor s11 (Ps30, HPC static pressure)', '[4] Sensor s11 is rising (3.9 std above healthy level)', '[5] LPT is monitored by sensor s4 (T50, LPT outlet temperature)', '[6] Sensor s4 is rising (3.3 std above healthy level)', '[7] LPC is monitored by sensor s2 (T24, LPC outlet temperature)', '[8] Sensor s2 is rising (2.7 std above healthy level)', '[9] Core is monitored by sensor s9 (Nc, physical core speed)', '[10] Sensor s9 is rising (2.7 std above healthy level)', '[11] HPC is monitored by sensor s3 (T30, HPC outlet temperature)', '[12] Sensor s3 is rising (2.5 std above healthy level)', '[13] A rising s11 indicates HPC_degradation', '[14] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement']"
+FD004,test,193,194,34.60468292236328,MEDIUM,15.0,A,"Model output:
+- Engine: Engine_194
+- Predicted RUL: 35 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 35 cycles for Engine_194 due to the engine's current condition and operating history, indicating moderate wear and tear. The medium risk level suggests that the engine is still within a safe operating range, but requires closer monitoring. To ensure optimal performance and prevent potential failure, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval. This will allow our maintenance team to inspect the engine's condition and perform any necessary repairs or replacements.","['[1] Predicted RUL is 35 cycles -> risk level MEDIUM', '[2] Engine 194 has component Core', '[3] Core is monitored by sensor s14 (NRc, corrected core speed)', '[4] Sensor s14 is rising (4.8 std above healthy level)', '[5] Core is monitored by sensor s9 (Nc, physical core speed)', '[6] Sensor s9 is rising (4.6 std above healthy level)', '[7] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[8] Sensor s12 is rising (4.1 std above healthy level)', '[9] Fan is monitored by sensor s15 (BPR, bypass ratio)', '[10] Sensor s15 is falling (4.1 std below healthy level)', '[11] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[12] Sensor s7 is rising (3.9 std above healthy level)', '[13] A rising s14 indicates HPC_degradation (secondary evidence)', '[14] A falling s15 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,212,213,40.20184326171875,MEDIUM,14.0,A,"Model output:
+- Engine: Engine_213
+- Predicted RUL: 40 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 40 cycles for Engine_213 due to the engine's current condition and operating history, indicating moderate wear and tear. The medium risk level suggests that the engine is still within a safe operating range, but requires closer monitoring. To ensure optimal performance and prevent potential failure, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval. This will allow our maintenance team to inspect the engine's condition and perform any necessary repairs or replacements.","['[1] Predicted RUL is 40 cycles -> risk level MEDIUM', '[2] Engine 213 has component HPC', '[3] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[4] Sensor s12 is rising (5.1 std above healthy level)', '[5] Core is monitored by sensor s9 (Nc, physical core speed)', '[6] Sensor s9 is rising (4.9 std above healthy level)', '[7] Core is monitored by sensor s14 (NRc, corrected core speed)', '[8] Sensor s14 is rising (4.8 std above healthy level)', '[9] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[10] Sensor s7 is rising (4.5 std above healthy level)', '[11] Fan is monitored by sensor s15 (BPR, bypass ratio)', '[12] Sensor s15 is falling (4.2 std below healthy level)', '[13] A rising s12 indicates HPC_degradation', '[14] A falling s15 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,215,216,20.064607620239258,HIGH,17.0,A,"Model output:
+- Engine: Engine_216
+- Predicted RUL: 20 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life of 20 cycles for Engine_216 due to the high risk of failure, indicating a significant increase in wear and tear. This could be attributed to a combination of factors such as high flight hours, poor maintenance history, or a recent engine component failure. To mitigate this risk, we recommend conducting a thorough inspection and replacement of the high-pressure compressor blades, which are the most critical components in the engine. This proactive maintenance action will help prevent a catastrophic engine failure and ensure the continued safe operation of the aircraft.","['[1] Predicted RUL is 20 cycles -> risk level HIGH', '[2] Engine 216 has component HPC', '[3] HPC is monitored by sensor s11 (Ps30, HPC static pressure)', '[4] Sensor s11 is rising (4.4 std above healthy level)', '[5] LPT is monitored by sensor s4 (T50, LPT outlet temperature)', '[6] Sensor s4 is rising (3.0 std above healthy level)', '[7] HPC is monitored by sensor s3 (T30, HPC outlet temperature)', '[8] Sensor s3 is rising (2.5 std above healthy level)', '[9] LPC is monitored by sensor s2 (T24, LPC outlet temperature)', '[10] Sensor s2 is rising (2.3 std above healthy level)', '[11] Core is monitored by sensor s17 (htBleed, bleed enthalpy)', '[12] Sensor s17 is rising (2.3 std above healthy level)', '[13] A rising s11 indicates HPC_degradation', '[14] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement']"
+FD004,test,0,1,36.625953674316406,MEDIUM,22.0,A,"Model output:
+- Engine: Engine_1
+- Predicted RUL: 37 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 37 cycles for Engine_1 due to the engine's current condition and operating history, indicating moderate wear and tear. The medium risk level suggests that the engine is still within a safe operating range, but requires closer monitoring. To ensure optimal performance and prevent potential failure, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval. This will allow our maintenance team to inspect the engine's condition and perform any necessary repairs or replacements.","['[1] Predicted RUL is 37 cycles -> risk level MEDIUM', '[2] Engine 1 has component Core', '[3] Core is monitored by sensor s14 (NRc, corrected core speed)', '[4] Sensor s14 is rising (3.1 std above healthy level)', '[5] Core is monitored by sensor s9 (Nc, physical core speed)', '[6] Sensor s9 is rising (2.9 std above healthy level)', '[7] Fan is monitored by sensor s15 (BPR, bypass ratio)', '[8] Sensor s15 is falling (2.6 std below healthy level)', '[9] Fan is monitored by sensor s8 (Nf, physical fan speed)', '[10] Sensor s8 is rising (2.6 std above healthy level)', '[11] Fan is monitored by sensor s13 (NRf, corrected fan speed)', '[12] Sensor s13 is rising (2.6 std above healthy level)', '[13] A rising s14 indicates HPC_degradation (secondary evidence)', '[14] A falling s15 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,24,25,57.850563049316406,MEDIUM,39.0,A,"Model output:
+- Engine: Engine_25
+- Predicted RUL: 58 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 58 cycles for Engine_25 due to its current condition and operating history, indicating a moderate risk of failure. The engine's performance and efficiency have been trending downward, suggesting potential wear and tear on its components. To mitigate this risk, we recommend a routine inspection and cleaning of the engine's compressor blades, which are most likely to be affected by the predicted failure. This maintenance action will help identify and address any issues before they lead to a complete engine failure.","['[1] Predicted RUL is 58 cycles -> risk level MEDIUM', '[2] Engine 25 has component Core', '[3] Core is monitored by sensor s14 (NRc, corrected core speed)', '[4] Sensor s14 is rising (3.8 std above healthy level)', '[5] Fan is monitored by sensor s8 (Nf, physical fan speed)', '[6] Sensor s8 is rising (3.7 std above healthy level)', '[7] Core is monitored by sensor s9 (Nc, physical core speed)', '[8] Sensor s9 is rising (3.6 std above healthy level)', '[9] Fan is monitored by sensor s15 (BPR, bypass ratio)', '[10] Sensor s15 is falling (3.4 std below healthy level)', '[11] Fan is monitored by sensor s13 (NRf, corrected fan speed)', '[12] Sensor s13 is rising (3.2 std above healthy level)', '[13] A rising s14 indicates HPC_degradation (secondary evidence)', '[14] A rising s8 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,41,42,23.10995101928711,HIGH,30.0,A,"Model output:
+- Engine: Engine_42
+- Predicted RUL: 23 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 23 cycles for Engine_42 due to the high risk of failure, indicating that the engine is nearing the end of its service life. This is likely due to the engine's age, usage, and potential accumulation of wear and tear. The high risk of failure suggests that the engine's condition is deteriorating rapidly. To mitigate this risk, we recommend inspecting the engine's compressor blades and turbine vanes for signs of excessive wear or damage.","['[1] Predicted RUL is 23 cycles -> risk level HIGH', '[2] Engine 42 has component HPC', '[3] HPC is monitored by sensor s11 (Ps30, HPC static pressure)', '[4] Sensor s11 is rising (3.5 std above healthy level)', '[5] LPT is monitored by sensor s4 (T50, LPT outlet temperature)', '[6] Sensor s4 is rising (3.4 std above healthy level)', '[7] Core is monitored by sensor s17 (htBleed, bleed enthalpy)', '[8] Sensor s17 is rising (2.7 std above healthy level)', '[9] LPC is monitored by sensor s2 (T24, LPC outlet temperature)', '[10] Sensor s2 is rising (2.4 std above healthy level)', '[11] HPC is monitored by sensor s3 (T30, HPC outlet temperature)', '[12] Sensor s3 is rising (2.2 std above healthy level)', '[13] A rising s11 indicates HPC_degradation', '[14] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement']"
+FD004,test,42,43,53.14805603027344,MEDIUM,42.0,A,"Model output:
+- Engine: Engine_43
+- Predicted RUL: 53 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 53 cycles for Engine_43 due to its current condition and historical data, indicating a moderate risk of failure. The engine's performance and efficiency have been trending within acceptable limits, but the predicted RUL suggests that maintenance should be performed to prevent potential issues. A recommended maintenance action is to inspect and replace the compressor blades at the next scheduled overhaul, which is typically every 2,000-3,000 hours. This proactive maintenance will help ensure the engine's continued reliable operation.","['[1] Predicted RUL is 53 cycles -> risk level MEDIUM', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,61,62,40.81510543823242,MEDIUM,33.0,A,"Model output:
+- Engine: Engine_62
+- Predicted RUL: 41 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 41 cycles for Engine_62 due to the engine's current condition and operating history, which indicates a moderate level of wear and tear. The medium risk level suggests that the engine is still within a safe operating range, but requires closer monitoring to prevent potential failure. To mitigate this risk, we recommend scheduling a routine inspection and oil change at the next scheduled maintenance interval, which is typically every 200-250 hours of operation. This proactive maintenance will help identify and address any potential issues before they become major problems.","['[1] Predicted RUL is 41 cycles -> risk level MEDIUM', '[2] Engine 62 has component Core', '[3] Core is monitored by sensor s14 (NRc, corrected core speed)', '[4] Sensor s14 is rising (3.1 std above healthy level)', '[5] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[6] Sensor s12 is rising (3.1 std above healthy level)', '[7] Core is monitored by sensor s9 (Nc, physical core speed)', '[8] Sensor s9 is rising (3.0 std above healthy level)', '[9] Fan is monitored by sensor s15 (BPR, bypass ratio)', '[10] Sensor s15 is falling (2.5 std below healthy level)', '[11] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[12] Sensor s7 is rising (2.5 std above healthy level)', '[13] A rising s14 indicates HPC_degradation (secondary evidence)', '[14] A falling s15 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,76,77,38.638160705566406,MEDIUM,25.0,A,"Model output:
+- Engine: Engine_77
+- Predicted RUL: 39 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 39 cycles for Engine_77 due to the engine's current condition and operating history, indicating a moderate risk of failure. The predicted RUL is based on the engine's performance data, which suggests that it has reached a critical point where maintenance is necessary to prevent a potential failure. To mitigate this risk, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval, which is typically every 2,000-3,000 hours. This will allow us to identify and address any potential issues before they become major problems.","['[1] Predicted RUL is 39 cycles -> risk level MEDIUM', '[2] Engine 77 has component LPT', '[3] LPT is monitored by sensor s4 (T50, LPT outlet temperature)', '[4] Sensor s4 is rising (2.5 std above healthy level)']"
+FD004,test,90,91,33.1702766418457,MEDIUM,50.0,A,"Model output:
+- Engine: Engine_91
+- Predicted RUL: 33 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 33 cycles for Engine_91 due to the engine's current condition and operating history, indicating moderate wear and tear. The medium risk level suggests that the engine is still within a safe operating range, but requires closer monitoring. To ensure optimal performance and prevent potential failure, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval. This will allow for proactive maintenance and minimize the risk of unexpected engine failure.","['[1] Predicted RUL is 33 cycles -> risk level MEDIUM', '[2] Engine 91 has component Core', '[3] Core is monitored by sensor s14 (NRc, corrected core speed)', '[4] Sensor s14 is rising (4.3 std above healthy level)', '[5] Core is monitored by sensor s9 (Nc, physical core speed)', '[6] Sensor s9 is rising (3.9 std above healthy level)', '[7] Fan is monitored by sensor s8 (Nf, physical fan speed)', '[8] Sensor s8 is rising (3.8 std above healthy level)', '[9] Fan is monitored by sensor s13 (NRf, corrected fan speed)', '[10] Sensor s13 is rising (3.8 std above healthy level)', '[11] A rising s14 indicates HPC_degradation (secondary evidence)', '[12] A rising s8 indicates Fan_degradation', '[13] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[14] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,122,123,36.51209259033203,MEDIUM,23.0,A,"Model output:
+- Engine: Engine_123
+- Predicted RUL: 37 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 37 cycles for Engine_123 due to its current condition and historical data, indicating a moderate risk of failure. The engine's performance and efficiency have been trending downward, suggesting potential wear and tear on its components. To mitigate this risk, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval, typically around 1,000-1,500 cycles. This will allow us to identify and address any potential issues before they escalate into more costly repairs.","['[1] Predicted RUL is 37 cycles -> risk level MEDIUM', '[2] Engine 123 has component Core', '[3] Core is monitored by sensor s14 (NRc, corrected core speed)', '[4] Sensor s14 is rising (4.0 std above healthy level)', '[5] Core is monitored by sensor s9 (Nc, physical core speed)', '[6] Sensor s9 is rising (3.8 std above healthy level)', '[7] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[8] Sensor s7 is rising (3.3 std above healthy level)', '[9] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[10] Sensor s12 is rising (3.2 std above healthy level)', '[11] Fan is monitored by sensor s15 (BPR, bypass ratio)', '[12] Sensor s15 is falling (3.0 std below healthy level)', '[13] A rising s14 indicates HPC_degradation (secondary evidence)', '[14] A falling s15 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,179,180,39.72953796386719,MEDIUM,32.0,A,"Model output:
+- Engine: Engine_180
+- Predicted RUL: 40 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 40 cycles for Engine_180 due to the engine's current condition and operating history, indicating moderate wear and tear. The medium risk level suggests that the engine is still within a safe operating range, but requires closer monitoring. To ensure optimal performance and prevent potential failure, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval. This will allow our maintenance team to inspect the engine's condition and perform any necessary repairs or replacements.","['[1] Predicted RUL is 40 cycles -> risk level MEDIUM', '[2] Engine 180 has component HPC', '[3] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[4] Sensor s12 is rising (5.2 std above healthy level)', '[5] Core is monitored by sensor s14 (NRc, corrected core speed)', '[6] Sensor s14 is rising (5.0 std above healthy level)', '[7] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[8] Sensor s7 is rising (4.9 std above healthy level)', '[9] Core is monitored by sensor s9 (Nc, physical core speed)', '[10] Sensor s9 is rising (4.8 std above healthy level)', '[11] Fan is monitored by sensor s15 (BPR, bypass ratio)', '[12] Sensor s15 is falling (4.2 std below healthy level)', '[13] A rising s12 indicates HPC_degradation', '[14] A falling s15 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,180,181,12.647818565368652,HIGH,37.0,A,"Model output:
+- Engine: Engine_181
+- Predicted RUL: 13 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 13 cycles for Engine_181 due to the high risk of failure, indicating that the engine is nearing the end of its service life. This prediction is likely based on the engine's age, usage, and any previous maintenance issues. The high risk of failure suggests that the engine's condition is deteriorating rapidly, making prompt maintenance necessary. A recommended maintenance action is to inspect and replace the engine's compressor blades, which are the most critical components, to prevent catastrophic failure.","['[1] Predicted RUL is 13 cycles -> risk level HIGH', '[2] Engine 181 has component Core', '[3] Core is monitored by sensor s9 (Nc, physical core speed)', '[4] Sensor s9 is rising (5.4 std above healthy level)', '[5] Core is monitored by sensor s14 (NRc, corrected core speed)', '[6] Sensor s14 is rising (5.0 std above healthy level)', '[7] Fan is monitored by sensor s8 (Nf, physical fan speed)', '[8] Sensor s8 is rising (3.6 std above healthy level)', '[9] Fan is monitored by sensor s13 (NRf, corrected fan speed)', '[10] Sensor s13 is rising (3.6 std above healthy level)', '[11] LPT is monitored by sensor s4 (T50, LPT outlet temperature)', '[12] Sensor s4 is rising (3.1 std above healthy level)', '[13] A rising s9 indicates HPC_degradation (secondary evidence)', '[14] A rising s8 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,189,190,60.526710510253906,MEDIUM,43.0,A,"Model output:
+- Engine: Engine_190
+- Predicted RUL: 61 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 61 cycles for Engine_190 due to the engine's current condition and operating history, indicating moderate wear and tear. The medium risk level suggests that the engine is still within a safe operating range, but requires closer monitoring. To ensure optimal performance and prevent potential failure, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval. This will allow our maintenance team to inspect the engine's condition and perform any necessary repairs or replacements.","['[1] Predicted RUL is 61 cycles -> risk level MEDIUM', '[2] Engine 190 has component Core', '[3] Core is monitored by sensor s14 (NRc, corrected core speed)', '[4] Sensor s14 is rising (2.1 std above healthy level)', '[5] A rising s14 indicates HPC_degradation (secondary evidence)', '[6] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement']"
+FD004,test,196,197,29.75177764892578,HIGH,36.0,A,"Model output:
+- Engine: Engine_197
+- Predicted RUL: 30 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 30 cycles for Engine_197 due to the high risk of failure, indicating that the engine is nearing the end of its service life. This is likely due to the engine's age, usage, and potential accumulation of wear and tear. The high risk of failure suggests that the engine's condition is deteriorating rapidly. To mitigate this risk, we recommend inspecting the engine's compressor blades and turbine vanes for signs of excessive wear or damage.","['[1] Predicted RUL is 30 cycles -> risk level HIGH', '[2] Engine 197 has component Core', '[3] Core is monitored by sensor s14 (NRc, corrected core speed)', '[4] Sensor s14 is rising (4.7 std above healthy level)', '[5] Core is monitored by sensor s9 (Nc, physical core speed)', '[6] Sensor s9 is rising (4.6 std above healthy level)', '[7] Fan is monitored by sensor s8 (Nf, physical fan speed)', '[8] Sensor s8 is rising (2.9 std above healthy level)', '[9] Fan is monitored by sensor s13 (NRf, corrected fan speed)', '[10] Sensor s13 is rising (2.6 std above healthy level)', '[11] A rising s14 indicates HPC_degradation (secondary evidence)', '[12] A rising s8 indicates Fan_degradation', '[13] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[14] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,221,222,63.489803314208984,MEDIUM,39.0,A,"Model output:
+- Engine: Engine_222
+- Predicted RUL: 63 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 63 cycles for Engine_222 due to its current condition and historical data, indicating a moderate risk of failure. The engine's performance and efficiency have been trending downward, suggesting potential wear and tear on its components. To mitigate this risk, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval, typically around 1,000-1,500 cycles. This will allow us to identify and address any potential issues before they escalate into more costly repairs.","['[1] Predicted RUL is 63 cycles -> risk level MEDIUM', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,243,244,31.71773338317871,MEDIUM,35.0,A,"Model output:
+- Engine: Engine_244
+- Predicted RUL: 32 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 32 cycles for Engine_244 due to the engine's current condition and operating history, indicating moderate wear and tear. The medium risk level suggests that the engine is still within a safe operating range, but requires closer monitoring. To ensure optimal performance and prevent potential failure, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval. This will allow our maintenance team to inspect the engine's condition and perform any necessary repairs or replacements.","['[1] Predicted RUL is 32 cycles -> risk level MEDIUM', '[2] Engine 244 has component Core', '[3] Core is monitored by sensor s14 (NRc, corrected core speed)', '[4] Sensor s14 is rising (4.5 std above healthy level)', '[5] Core is monitored by sensor s9 (Nc, physical core speed)', '[6] Sensor s9 is rising (4.4 std above healthy level)', '[7] Fan is monitored by sensor s13 (NRf, corrected fan speed)', '[8] Sensor s13 is rising (2.8 std above healthy level)', '[9] Fan is monitored by sensor s8 (Nf, physical fan speed)', '[10] Sensor s8 is rising (2.8 std above healthy level)', '[11] HPC is monitored by sensor s11 (Ps30, HPC static pressure)', '[12] Sensor s11 is rising (2.1 std above healthy level)', '[13] A rising s14 indicates HPC_degradation (secondary evidence)', '[14] A rising s13 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,247,248,24.098064422607422,HIGH,26.0,A,"Model output:
+- Engine: Engine_248
+- Predicted RUL: 24 cycles (risk: HIGH)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 24 cycles for Engine_248 due to the high risk of failure, indicating that the engine is nearing the end of its service life. This is likely due to the engine's age, usage, and potential accumulation of wear and tear. The high risk of failure suggests that the engine's condition is deteriorating rapidly. To mitigate this risk, we recommend inspecting the engine's compressor blades and turbine vanes for signs of excessive wear or damage.","['[1] Predicted RUL is 24 cycles -> risk level HIGH', '[2] Engine 248 has component Core', '[3] Core is monitored by sensor s9 (Nc, physical core speed)', '[4] Sensor s9 is rising (3.7 std above healthy level)', '[5] Core is monitored by sensor s14 (NRc, corrected core speed)', '[6] Sensor s14 is rising (3.6 std above healthy level)', '[7] Fan is monitored by sensor s8 (Nf, physical fan speed)', '[8] Sensor s8 is rising (3.1 std above healthy level)', '[9] Fan is monitored by sensor s13 (NRf, corrected fan speed)', '[10] Sensor s13 is rising (3.0 std above healthy level)', '[11] HPC is monitored by sensor s11 (Ps30, HPC static pressure)', '[12] Sensor s11 is rising (2.6 std above healthy level)', '[13] A rising s9 indicates HPC_degradation (secondary evidence)', '[14] A rising s8 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,26,27,69.45661926269531,MEDIUM,76.0,A,"Model output:
+- Engine: Engine_27
+- Predicted RUL: 69 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 69 cycles for Engine_27 due to its current condition and historical data, indicating a moderate risk of failure. The engine's performance and efficiency have been trending downward, suggesting potential wear and tear on its components. To mitigate this risk, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval, typically around 1,000-1,500 cycles. This will allow us to identify and address any potential issues before they escalate into more costly repairs.","['[1] Predicted RUL is 69 cycles -> risk level MEDIUM', '[2] Engine 27 has component HPC', '[3] HPC is monitored by sensor s11 (Ps30, HPC static pressure)', '[4] Sensor s11 is rising (2.4 std above healthy level)', '[5] LPC is monitored by sensor s2 (T24, LPC outlet temperature)', '[6] Sensor s2 is rising (2.2 std above healthy level)', '[7] LPT is monitored by sensor s4 (T50, LPT outlet temperature)', '[8] Sensor s4 is rising (2.2 std above healthy level)', '[9] A rising s11 indicates HPC_degradation', '[10] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement']"
+FD004,test,40,41,91.7126235961914,LOW,97.0,A,"Model output:
+- Engine: Engine_41
+- Predicted RUL: 92 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 92 cycles for Engine_41 due to its low risk assessment, indicating that the engine is currently operating within normal parameters. This prediction is based on the engine's performance data, which shows a consistent and healthy operation. Given the low risk, no immediate maintenance action is required, but regular monitoring and inspection should be performed to ensure continued optimal performance.","['[1] Predicted RUL is 92 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,44,45,79.58184051513672,LOW,85.0,A,"Model output:
+- Engine: Engine_45
+- Predicted RUL: 80 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 80 cycles for Engine_45 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has a good chance of completing its scheduled maintenance cycles. However, to ensure optimal performance and prevent potential issues, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval. This will provide an opportunity to inspect the engine's components and perform any necessary repairs or replacements.","['[1] Predicted RUL is 80 cycles -> risk level LOW', '[2] Engine 45 has component Core', '[3] Core is monitored by sensor s14 (NRc, corrected core speed)', '[4] Sensor s14 is rising (2.4 std above healthy level)', '[5] Core is monitored by sensor s9 (Nc, physical core speed)', '[6] Sensor s9 is rising (2.1 std above healthy level)', '[7] A rising s14 indicates HPC_degradation (secondary evidence)', '[8] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement']"
+FD004,test,55,56,88.83894348144531,LOW,67.0,A,"Model output:
+- Engine: Engine_56
+- Predicted RUL: 89 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 89 cycles for Engine_56 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has a good chance of completing its scheduled maintenance cycles. However, to ensure optimal performance and prevent potential issues, we recommend a routine inspection and cleaning of the engine's compressor blades after the next 50 cycles. This will help maintain the engine's efficiency and prevent potential damage.","['[1] Predicted RUL is 89 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,56,57,112.2404556274414,LOW,97.0,A,"Model output:
+- Engine: Engine_57
+- Predicted RUL: 112 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 112 cycles for Engine_57 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has sufficient life left to complete its scheduled maintenance and operations. However, to ensure optimal performance and prevent potential issues, we recommend a routine inspection and cleaning of the engine's compressor blades after the next 50 cycles. This will help maintain the engine's efficiency and prevent potential damage.","['[1] Predicted RUL is 112 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,60,61,53.49775695800781,MEDIUM,51.0,A,"Model output:
+- Engine: Engine_61
+- Predicted RUL: 53 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 53 cycles for Engine_61 due to its current condition and historical data, indicating a moderate risk of failure. The engine's performance and efficiency have been trending within acceptable limits, but the predicted RUL suggests that maintenance should be performed to prevent potential issues. A recommended maintenance action is to inspect and replace the high-pressure compressor blades at the next scheduled overhaul, which is typically every 1,500 cycles. This proactive maintenance will help ensure the engine's continued reliable operation.","['[1] Predicted RUL is 53 cycles -> risk level MEDIUM', '[2] Engine 61 has component HPC', '[3] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[4] Sensor s12 is rising (4.3 std above healthy level)', '[5] Core is monitored by sensor s9 (Nc, physical core speed)', '[6] Sensor s9 is rising (4.2 std above healthy level)', '[7] Core is monitored by sensor s14 (NRc, corrected core speed)', '[8] Sensor s14 is rising (4.2 std above healthy level)', '[9] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[10] Sensor s7 is rising (4.0 std above healthy level)', '[11] Fan is monitored by sensor s15 (BPR, bypass ratio)', '[12] Sensor s15 is falling (3.4 std below healthy level)', '[13] A rising s12 indicates HPC_degradation', '[14] A falling s15 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,73,74,115.10517120361328,LOW,89.0,A,"Model output:
+- Engine: Engine_74
+- Predicted RUL: 115 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 115 cycles for Engine_74 due to its current condition and operating history, indicating a low risk of failure. The engine's performance and efficiency metrics are within acceptable ranges, suggesting that it has a good balance of remaining life and potential for further operation. However, to ensure optimal performance and prevent potential issues, we recommend inspecting the engine's compressor blades for signs of wear or damage after the next scheduled maintenance cycle. This will help identify any potential problems early on and prevent costly repairs.","['[1] Predicted RUL is 115 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,85,86,86.21056365966797,LOW,70.0,A,"Model output:
+- Engine: Engine_86
+- Predicted RUL: 86 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 86 cycles for Engine_86 due to its low risk assessment, indicating that the engine is currently operating within normal parameters. This prediction is based on the engine's performance data and historical trends, suggesting that it has a good chance of reaching its planned maintenance interval without any major issues. To ensure the engine's continued safe operation, we recommend scheduling a routine inspection and maintenance check at the next scheduled maintenance interval, regardless of the predicted RUL. This will provide an opportunity to inspect the engine's condition and perform any necessary repairs or replacements before any potential issues arise.","['[1] Predicted RUL is 86 cycles -> risk level LOW', '[2] Engine 86 has component HPC', '[3] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[4] Sensor s12 is rising (3.4 std above healthy level)', '[5] Core is monitored by sensor s14 (NRc, corrected core speed)', '[6] Sensor s14 is rising (3.2 std above healthy level)', '[7] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[8] Sensor s7 is rising (3.1 std above healthy level)', '[9] Fan is monitored by sensor s15 (BPR, bypass ratio)', '[10] Sensor s15 is falling (2.8 std below healthy level)', '[11] Core is monitored by sensor s9 (Nc, physical core speed)', '[12] Sensor s9 is rising (2.7 std above healthy level)', '[13] A rising s12 indicates HPC_degradation', '[14] A falling s15 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,91,92,73.61915588378906,LOW,73.0,A,"Model output:
+- Engine: Engine_92
+- Predicted RUL: 74 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 74 cycles for Engine_92 due to its low risk assessment, indicating that the engine is currently operating within normal parameters. This prediction is likely based on the engine's history of normal operation, minimal wear, and no recent anomalies. To ensure the engine's continued safe operation, we recommend scheduling a routine inspection and cleaning of the compressor blades after the next 50 cycles. This will help maintain the engine's performance and prevent potential issues.","['[1] Predicted RUL is 74 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,95,96,74.13041687011719,LOW,71.0,A,"Model output:
+- Engine: Engine_96
+- Predicted RUL: 74 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 74 cycles for Engine_96 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has sufficient life left to complete its scheduled maintenance and operations. However, to ensure optimal performance and prevent potential issues, we recommend a routine inspection and cleaning of the engine's compressor blades after the next 50 cycles. This will help maintain the engine's efficiency and prevent potential damage.","['[1] Predicted RUL is 74 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,142,143,52.03597640991211,MEDIUM,53.0,A,"Model output:
+- Engine: Engine_143
+- Predicted RUL: 52 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 52 cycles for Engine_143 due to its current condition and historical data, indicating a moderate risk of failure. The engine's performance and efficiency have been trending within acceptable parameters, but the predicted RUL suggests that it may require maintenance or replacement before the next scheduled overhaul. To mitigate this risk, we recommend scheduling a routine inspection and cleaning of the engine's compressor blades at the next scheduled maintenance interval. This will help identify and address any potential issues before they escalate into more costly repairs.","['[1] Predicted RUL is 52 cycles -> risk level MEDIUM', '[2] Engine 143 has component HPC', '[3] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[4] Sensor s7 is rising (3.2 std above healthy level)', '[5] Core is monitored by sensor s14 (NRc, corrected core speed)', '[6] Sensor s14 is rising (3.0 std above healthy level)', '[7] Core is monitored by sensor s9 (Nc, physical core speed)', '[8] Sensor s9 is rising (2.9 std above healthy level)', '[9] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[10] Sensor s12 is rising (2.9 std above healthy level)', '[11] Fan is monitored by sensor s15 (BPR, bypass ratio)', '[12] Sensor s15 is falling (2.7 std below healthy level)', '[13] A rising s7 indicates HPC_degradation', '[14] A falling s15 indicates Fan_degradation', '[15] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement', '[16] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings']"
+FD004,test,151,152,96.74508666992188,LOW,88.0,A,"Model output:
+- Engine: Engine_152
+- Predicted RUL: 97 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 97 cycles for Engine_152 due to its low risk assessment, indicating that the engine is currently operating within normal parameters. This prediction is based on the engine's current condition, usage patterns, and historical data. Given the low risk, no immediate maintenance action is required. However, regular monitoring and inspection of the engine's performance and condition are still recommended to ensure optimal operation.","['[1] Predicted RUL is 97 cycles -> risk level LOW', '[2] Engine 152 has component HPC', '[3] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[4] Sensor s12 is rising (2.2 std above healthy level)', '[5] HPC is monitored by sensor s7 (P30, HPC outlet pressure)', '[6] Sensor s7 is rising (2.0 std above healthy level)', '[7] A rising s12 indicates HPC_degradation', '[8] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement']"
+FD004,test,165,166,100.54324340820312,LOW,72.0,A,"Model output:
+- Engine: Engine_166
+- Predicted RUL: 101 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 101 cycles for Engine_166 due to its current condition and operating history, indicating a low risk of failure. This prediction is based on the engine's performance data, which suggests it has been well-maintained and operated within normal parameters. Given the low risk, no immediate maintenance action is required, but regular monitoring and inspection are still recommended to ensure continued optimal performance.","['[1] Predicted RUL is 101 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,199,200,80.78398895263672,LOW,96.0,A,"Model output:
+- Engine: Engine_200
+- Predicted RUL: 81 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 81 cycles for Engine_200 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has a good chance of completing its scheduled maintenance cycles. However, the model's prediction is based on historical data and may not accurately reflect the engine's future performance. A recommended maintenance action is to schedule a routine inspection and monitoring of Engine_200's performance to ensure it remains in optimal condition.","['[1] Predicted RUL is 81 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,222,223,51.41934585571289,MEDIUM,58.0,A,"Model output:
+- Engine: Engine_223
+- Predicted RUL: 51 cycles (risk: MEDIUM)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 51 cycles for Engine_223 due to the engine's current condition and operating history, indicating moderate wear and tear. The medium risk level suggests that the engine is still within a safe operating range, but requires closer monitoring. To ensure optimal performance and prevent potential failure, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval. This will allow our maintenance team to inspect the engine's condition and perform any necessary repairs or replacements.","['[1] Predicted RUL is 51 cycles -> risk level MEDIUM', '[2] Engine 223 has component Fan', '[3] Fan is monitored by sensor s15 (BPR, bypass ratio)', '[4] Sensor s15 is falling (2.9 std below healthy level)', '[5] Core is monitored by sensor s9 (Nc, physical core speed)', '[6] Sensor s9 is rising (2.8 std above healthy level)', '[7] Core is monitored by sensor s14 (NRc, corrected core speed)', '[8] Sensor s14 is rising (2.7 std above healthy level)', '[9] Fan is monitored by sensor s8 (Nf, physical fan speed)', '[10] Sensor s8 is rising (2.1 std above healthy level)', '[11] HPC is monitored by sensor s12 (phi, fuel flow to Ps30 ratio)', '[12] Sensor s12 is rising (2.0 std above healthy level)', '[13] A falling s15 indicates Fan_degradation', '[14] A rising s9 indicates HPC_degradation (secondary evidence)', '[15] Fan_degradation is fixed by: Inspect fan blades; Check fan balance and bearings', '[16] HPC_degradation is fixed by: Inspect compressor blades and clearances; Schedule HPC wash or replacement']"
+FD004,test,32,33,115.25479125976562,LOW,147.0,A,"Model output:
+- Engine: Engine_33
+- Predicted RUL: 115 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 115 cycles for Engine_33 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has sufficient life left to complete its scheduled maintenance and operations. However, to ensure optimal performance and prevent potential issues, we recommend a routine inspection and cleaning of the engine's compressor blades after the next 50 cycles. This will help maintain the engine's efficiency and prevent potential damage.","['[1] Predicted RUL is 115 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,45,46,108.74015045166016,LOW,134.0,A,"Model output:
+- Engine: Engine_46
+- Predicted RUL: 109 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 109 cycles for Engine_46 due to its current condition and historical data, indicating a low risk of failure. This prediction is based on the engine's performance and maintenance history, which suggests it has been well-maintained and operated within normal parameters. As a result, the model is confident in its estimate of 109 cycles remaining. Based on this prediction, we recommend scheduling a routine inspection and maintenance check at approximately 100 cycles to ensure the engine remains in optimal condition.","['[1] Predicted RUL is 109 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,52,53,118.4325180053711,LOW,142.0,A,"Model output:
+- Engine: Engine_53
+- Predicted RUL: 118 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 118 cycles for Engine_53 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has sufficient life left to complete its scheduled maintenance and operations. However, to ensure optimal performance and prevent potential issues, we recommend a routine inspection and cleaning of the engine's compressor blades after the next 50 cycles. This will help maintain the engine's efficiency and prevent potential damage.","['[1] Predicted RUL is 118 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,62,63,109.72726440429688,LOW,184.0,A,"Model output:
+- Engine: Engine_63
+- Predicted RUL: 110 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 110 cycles for Engine_63 due to its current condition and operating history, indicating a low risk of failure. This prediction is based on the engine's performance data, which suggests it has been well-maintained and operated within normal parameters. As a result, the model estimates that the engine will continue to operate reliably for approximately 110 cycles. To ensure the engine's continued safe operation, we recommend scheduling a routine inspection and maintenance check at the next scheduled maintenance interval.","['[1] Predicted RUL is 110 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,75,76,114.70462799072266,LOW,163.0,A,"Model output:
+- Engine: Engine_76
+- Predicted RUL: 115 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 115 cycles for Engine_76 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has sufficient life left to complete its scheduled maintenance and operations. However, to ensure optimal performance and prevent potential issues, we recommend a routine inspection and cleaning of the engine's compressor blades after the next 50 cycles. This will help maintain the engine's efficiency and prevent potential damage.","['[1] Predicted RUL is 115 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,121,122,114.87657165527344,LOW,192.0,A,"Model output:
+- Engine: Engine_122
+- Predicted RUL: 115 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 115 cycles for Engine_122 due to its current condition and operating history, indicating a low risk of failure. The engine's performance and efficiency metrics are within acceptable ranges, suggesting that it has a good balance of remaining life and potential for further operation. However, to ensure optimal performance and prevent potential issues, we recommend a routine inspection and cleaning of the engine's compressor blades after the next 50 cycles. This will help maintain the engine's efficiency and prevent potential damage.","['[1] Predicted RUL is 115 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,131,132,90.50679779052734,LOW,116.0,A,"Model output:
+- Engine: Engine_132
+- Predicted RUL: 91 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 91 cycles for Engine_132 due to its current condition and operating history, indicating a low risk of failure. The engine's performance and efficiency metrics are within acceptable ranges, suggesting that it has a good balance of remaining life and potential for further operation. However, to ensure optimal performance and prevent potential issues, we recommend inspecting the engine's compressor blades for signs of wear or damage after the next scheduled maintenance cycle. This proactive inspection will help identify any potential problems before they become major issues.","['[1] Predicted RUL is 91 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,135,136,117.30442810058594,LOW,122.0,A,"Model output:
+- Engine: Engine_136
+- Predicted RUL: 117 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 117 cycles for Engine_136 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has sufficient life left to complete its scheduled maintenance and operations. However, to ensure optimal performance and prevent potential issues, we recommend a routine inspection and cleaning of the engine's compressor blades after the next 50 cycles. This will help maintain the engine's efficiency and prevent potential damage.","['[1] Predicted RUL is 117 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,140,141,101.66252899169922,LOW,130.0,A,"Model output:
+- Engine: Engine_141
+- Predicted RUL: 102 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 102 cycles for Engine_141 due to its low risk assessment, indicating that the engine is currently operating within normal parameters. This prediction is likely based on the engine's current condition, maintenance history, and operational usage patterns. Given the low risk, no immediate maintenance action is required, but regular monitoring and inspection should be performed to ensure the engine continues to operate safely.","['[1] Predicted RUL is 102 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,170,171,96.2338638305664,LOW,126.0,A,"Model output:
+- Engine: Engine_171
+- Predicted RUL: 96 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 96 cycles for Engine_171 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has a good chance of completing its scheduled maintenance cycles without issue. However, to ensure optimal performance and prevent potential problems, we recommend scheduling a routine inspection and maintenance check at the next scheduled overhaul interval. This will allow our maintenance team to identify and address any potential issues before they become major problems.","['[1] Predicted RUL is 96 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,177,178,118.13129425048828,LOW,106.0,A,"Model output:
+- Engine: Engine_178
+- Predicted RUL: 118 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 118 cycles for Engine_178 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has a good chance of completing its scheduled maintenance cycles. However, to ensure optimal performance and prevent potential issues, we recommend a routine inspection and cleaning of the engine's compressor blades after the next 50 cycles. This will help maintain the engine's efficiency and prevent potential damage.","['[1] Predicted RUL is 118 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,192,193,80.27052307128906,LOW,104.0,A,"Model output:
+- Engine: Engine_193
+- Predicted RUL: 80 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 80 cycles for Engine_193 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has sufficient life left to complete its scheduled maintenance and operations. However, to ensure optimal performance and prevent potential issues, we recommend a routine inspection and cleaning of the engine's compressor blades after the next 20 cycles. This will help maintain the engine's efficiency and prevent potential damage.","['[1] Predicted RUL is 80 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,203,204,95.97374725341797,LOW,151.0,A,"Model output:
+- Engine: Engine_204
+- Predicted RUL: 96 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 96 cycles for Engine_204 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has sufficient life left to complete its scheduled maintenance and operations. However, to ensure optimal performance and prevent potential issues, we recommend a routine inspection and cleaning of the engine's compressor blades after the next 50 cycles. This will help maintain the engine's efficiency and prevent potential damage.","['[1] Predicted RUL is 96 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,205,206,106.70287322998047,LOW,109.0,A,"Model output:
+- Engine: Engine_206
+- Predicted RUL: 107 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 107 cycles for Engine_206 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has sufficient life left to complete its scheduled maintenance and operations. However, to ensure optimal performance and prevent potential issues, we recommend a routine inspection and cleaning of the engine's compressor blades after the next 50 cycles. This will help maintain the engine's efficiency and prevent potential damage.","['[1] Predicted RUL is 107 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
+FD004,test,224,225,113.42051696777344,LOW,145.0,A,"Model output:
+- Engine: Engine_225
+- Predicted RUL: 113 cycles (risk: LOW)
+
+Write an explanation with:
+(a) why the model predicts this remaining useful life, and
+(b) a recommended maintenance action.
+Use 3-4 short sentences. Do not add a fact list or headings.
+","The model predicts a remaining useful life (RUL) of 113 cycles for Engine_225 due to its current condition and historical data, indicating a low risk of failure. The engine's performance and health metrics are within acceptable ranges, suggesting that it has sufficient life left to complete its scheduled maintenance and operations. However, to ensure optimal performance and prevent potential issues, we recommend a routine inspection and cleaning of the engine's compressor blades after the next 50 cycles. This will help maintain the engine's efficiency and prevent potential damage.","['[1] Predicted RUL is 113 cycles -> risk level LOW', '[2] No sensor deviates strongly from its healthy level']"
